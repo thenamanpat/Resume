@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Naman Patwari (http://thenamanpatwari.com)
+%
+% Original repository:
+% https://github.com/thenamanpat/Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{resume_openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Naman}{Patwari}{ \urlstyle{same}\url{http://thenamanpatwari.com} \\
+\href{mailto:npatwar@purdue.edu}{npatwar@purdue.edu} | 765.588.7805
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Purdue University}
+\descript{BS/MS in Computer Science}
+\location{Expected May 2019}
+Conc. in Database \& Information Systems
+\location{ Cum. GPA: 3.4 / 4.0 \\
+Major GPA: 3.6 / 4.0}
+\sectionsep
+
+
+\descript{Certificate in Entrepreneurship and Innovation}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Introduction to Cryptography \\
+Blockchain Seminar \\
+\sectionsep
+
+
+
+\subsection{Undergraduate}
+Analysis of Algorithms \\
+Operating Systems \\
+Intro to Relational Databases Systems \\
+Computer Architecture \\
+Data Mining \& Machine Learning \\
+Consulting for emerging enterprise \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 100,000 lines:}
+Java \textbullet{}   C++ \textbullet{} Python\\
+\location{Over 1,000 lines:}
+Javascript \textbullet{} C \\ 
+\location{Familiar:}
+HTML/CSS \textbullet{} PHP \textbullet{} Assembly \\
+\sectionsep
+
+\subsection{Technologies used}
+Git \textbullet{} AWS services \textbullet{} Django \\
+Docker/Containerization \textbullet{} ML models \\
+MySQL \textbullet{} NoSQL \textbullet{} Android \textbullet{} Maven \\
+\sectionsep
+
+\subsection{Other}
+System design \textbullet{} Database management \\
+Public speaking \textbullet{} Communication\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/thenamanpat}{\custombold{thenamanpat}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/thenamanpat}{\custombold{thenamanpat}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Professional Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Experience}
+
+\runsubsection{Amazon}
+\descript{| Software Engineering Intern @ Catalog Dataworks}
+\location{May 2017 – July 2017 | Cupertino, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed a generic platform to ingest, process and store log files in real time
+\item Implemented API controllers in java which spins up required AWS services based on client specification
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Bloomberg LP}
+\descript{| Software Engineering Intern @ Bloomberg Foundational Search (BFS)}
+\location{May 2016 - July 2016 | New York, NY}
+\begin{tightemize}
+\item Containerized Jenkins using Docker to distribute workload and facilitate fast deployment
+\item Containerized BFS’s custom Solr packages to pave way for smart orchestration within current architecture
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Relevant Projects/Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Relevant Projects/Experience}
+
+\runsubsection{Undergraduate Research Assistant}
+\descript{ | Purdue University}
+\location{January 2017 - Present}
+\begin{tightemize}
+\item Big Data Management
+\item Machine Learning methods to verify integrity of political discourse
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Undergraduate Teaching Assistant}
+\descript{ | Purdue University}
+\location{August 2016 - Present}
+\begin{tightemize}
+\item \custombold{CS 390 Competitive Programming}  \\ 
+\textbullet{} Creating and presenting weekly slides and hosting competitions to hone competitive programming skills \\
+\textbullet{} Class size grew from 20 to 90 within 2 semesters due to increasing popularity of class \\
+\item \custombold{CS 390 Advanced Languages (C++/Java/Python)}\\
+\textbullet{} Creating tutorials on C++/Django and holding office hours for class of 80 to assist with class projects \\
+\textbullet{} Built a bidding-style project listing website in Python for Purdue in partnership with IBM \\
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Hope Helping Hand}
+\descript{ | Durgapur,  India}
+\location{November 2013 - July 2014}
+\location{https://github.com/thenamanpat/Hope-Helping-Hand}
+\begin{tightemize}
+\item Designed and implemented teaching software with interactive games that helps the children learn faster
+\item Taught at a school for mentally challenged children to understand effective teaching methods
+\item Replaced traditional use of flashcards to reduce workload of teachers
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}
